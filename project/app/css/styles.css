@@ -1,3 +1,6 @@
 .testing {
   width: 71.43%;
-  height: 71.43%; }
+  height: 71.43%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
