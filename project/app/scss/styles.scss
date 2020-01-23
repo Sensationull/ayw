@@ -1,5 +1,6 @@
-.testing {
+  .testing {
   width: percentage($number: (5/7));
   height: percentage($number: (5/7));
   // background-color: $red;
+  display: flex;
 }
