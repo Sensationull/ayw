@@ -3,7 +3,11 @@ const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const browserSync = require('browser-sync');
-const autoprefixer = require('gulp-autoprefixer')
+const autoprefixer = require('gulp-autoprefixer');
+const autoprefix = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const postcss = require('gulp-postcss');
+
 // gulp.task('task-to-be-done', function() {
 //   // stuff here
 // });
@@ -17,12 +21,14 @@ gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss')
   // next if there's an error getting the source files, print to the console the error
     .pipe(customPlumber('Error Running Sass'))
+  // next if we want to init sourcemaps to keep track of where css errors might exist
+    .pipe(sourcemaps.init())
   // next how precise do you want decimals to be?
     .pipe(sass({precision: 2}))
-  // next it should autoprefix the compiled files for the varying vendors
-    .pipe(autoprefixer({
-      browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1'] 
-    }))
+  // next it should autoprefix the compiled files for the varying vendors NOTE  had to add the postcss in an attempt to get the autoprefixing to work inside of chrome
+    .pipe(postcss([autoprefix()]))
+  // next is should write the sourcemaps before it hits the destination
+    .pipe(sourcemaps.write())
   // next, where should it put the compiled files?
     .pipe(gulp.dest('app/css'))
   // next, tell browserSync to reload the files after the last task is done. 
@@ -38,7 +44,7 @@ gulp.task('browser', function() {
     server: {
       baseDir: 'app',
     },
-    open: false,
+    // open: false,
     notify: false,
     // NOTE: hella options exist inside of browser sync, 
     // browser, allows you to specify which browsers to use in the development phase
