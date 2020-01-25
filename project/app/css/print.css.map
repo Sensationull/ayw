@@ -1,0 +1,1 @@
+{"version":3,"sources":["print.scss"],"names":[],"mappings":"AAAA;EACE,qBAAqB;EACrB,YAAW;EACX,aAAa,EAAA","file":"print.css","sourcesContent":[".stumptown {\n  border: 1px solid red;\n  width:100px;\n  height: 500px;\n}"]}

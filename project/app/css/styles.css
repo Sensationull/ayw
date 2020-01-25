@@ -2,5 +2,9 @@
   width: 71.43%;
   height: 71.43%;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
+
+.testing {
+  width: 20%; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlcy5zY3NzIiwiX3Rlc3Rpbmcuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBRTtFQUNBLGFBQWlDO0VBQ2pDLGNBQWtDO0VBRWxDLG9CQUFhO0VBQWIsYUFBYSxFQUFBOztBQ0pmO0VBQ0UsVUFBVSxFQUFBIiwiZmlsZSI6InN0eWxlcy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgIC50ZXN0aW5nIHtcbiAgd2lkdGg6IHBlcmNlbnRhZ2UoJG51bWJlcjogKDUvNykpO1xuICBoZWlnaHQ6IHBlcmNlbnRhZ2UoJG51bWJlcjogKDUvNykpO1xuICAvLyBiYWNrZ3JvdW5kLWNvbG9yOiAkcmVkO1xuICBkaXNwbGF5OiBmbGV4O1xufVxuXG5AaW1wb3J0IFwidGVzdGluZ1wiOyIsIi50ZXN0aW5nIHtcbiAgd2lkdGg6IDIwJTtcbn0iXX0= */
