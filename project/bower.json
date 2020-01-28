@@ -1,0 +1,21 @@
+{
+  "name": "project",
+  "description": "Automating My First Workflow",
+  "main": "app/js/main.js",
+  "authors": [
+    "andrewjohnso7 <andrewjohnso17@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/andrewjohnso7/ayw",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

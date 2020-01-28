@@ -57,7 +57,8 @@ gulp.task('browser', function() {
 });
 
 gulp.task('watch', ['browser','sass'],function() {
-  gulp.watch('app/scss/**/*.scss', ['sass'])
+  gulp.watch('app/scss/**/*.scss', ['sass']);
+  gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
 // TODO figure out how to make the watch task start sass at the same time
