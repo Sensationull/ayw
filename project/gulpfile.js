@@ -7,6 +7,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const autoprefix = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
+const nunjucksRender = require('gulp-nunjucks-render');
 
 // gulp.task('task-to-be-done', function() {
 //   // stuff here
@@ -55,6 +56,19 @@ gulp.task('browser', function() {
     // browser: ['google chrome', 'firefox']
   })
 });
+
+gulp.task('nunjucks', function() {
+  nunjucksRender.nunjucks.configure(['app/templates/'])
+
+  // where can gulp find the correct files?
+  return gulp.src('app/pages/**/*.+(html|nunjucks)')
+  // Renders nunjuck files
+  .pipe(nunjucksRender({
+    path: ['app/templates']
+  }))
+  .pipe(gulp.dest('app'))
+});
+
 
 gulp.task('watch', ['browser','sass'],function() {
   gulp.watch('app/scss/**/*.scss', ['sass']);
